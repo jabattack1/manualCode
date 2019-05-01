@@ -79,10 +79,14 @@ Array.prototype.remove = function() {
 var total = nums.reduce((a, b) => a + b, 0)
 
 
-
-
 //get only unique arrays of an array
 [...new Set(final.map(v => JSON.stringify(v)))].map(v => JSON.parse(v));
+
+// get shortest length string
+const shortest = strs.reduce((a, b) => (a.length <= b.length) ? a : b)
+
+// get all other than 'shortest'
+const otherstrs = strs.filter(s => s !== shortest)
 
 
 
